@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+
+h1{
+    text-align: center;
+}
+
+#root{
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+input,
+::placeholder{
+    border: 1px solid green;
+    color: white;
+    background-color: royalblue;
+    text-align: center;
+}
+
+.image{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
