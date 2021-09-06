@@ -22,35 +22,40 @@
     <title>🧑‍🎓 Vue Hello</title>
   </head>
   <body>
-    <!-- inizio header  -->
-    <header>
-    </header>
-    <!-- fine header  -->
 
-    <!-- inizio main  -->
-    <main id="root">
+    <!-- inizio root  -->
+    <div id="root">
         
-        <!-- <div  v-bind:style="{backgroundImage: 'url(' + image + ')'}">  alternativa --> 
+        <!-- main div per immagine di sfondo  -->
         <div class="image"  v-bind:style="{'background-image': 'url(' + image + ')'}">
+        <!-- <div  v-bind:style="{backgroundImage: 'url(' + image + ')'}">  alternativa --> 
             <h1>Vue.js</h1>
+            <div class="container">
+                <input v-model="name" :class="colorClass" type="name" />
+                <input v-model="surname" :class="colorClass" type="surname" />
+                <input v-model="nationality" :class="colorClass" type="nationality" />
+                <input v-model="city" :class="colorClass" type="city" />
 
-            <input v-model="name" type="name" />
-            <input v-model="surname" placeholder="inserisci il tuo cognome" />
-            <input v-model="nationality" :class="colorClass" type="nationality" />
-            <input v-model="city" type="city" />
-            <h2>{{name + ' ' + ' ' + surname + '  is ' + nationality + '  and he is from ' + ' ' + city}}</h2>
+                <h2 :class="colorClass" >{{name + ' ' + surname + '  is ' + nationality + '  and he is from ' + ' ' + city}}</h2>
+
+            </div>
 
             <!-- <div>
-                <img :src = "image" /> 
+                <img :src = "img/background.jpeg" /> 
             </div> -->
+
+            <div class="container">
+                <h1>{{ year}}</h1>
+                <button @click="incrementYear">Increase</button>
+                <button @click="reduceYear"> Decrease</button>
+            </div>
+
+            <div class="footer">&copy; <span>Luca Ciprani</span></div>
         </div>
+        <!-- fine main div per immagine di sfondo  -->
 
-    </main>
-    <!-- fine main  -->
-
-    <!-- inizio footer  -->
-    <footer></footer>
-    <!-- fine footer  -->
+    </div>
+    <!-- fine root  -->
 
     <!-- importazione js  -->
     <script src="js/main.js"></script>
